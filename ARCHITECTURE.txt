@@ -1,0 +1,5 @@
+composer dump-autoload
+
+php -S localhost:8080 -t public/
+
+composer require "twig/twig"

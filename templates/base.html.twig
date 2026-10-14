@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Carnet de contacts{% endblock %}</title>
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/contacts">Contacts</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    {% block javascripts %}{% endblock %}
+</body>
+</html>
