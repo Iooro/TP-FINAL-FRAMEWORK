@@ -44,15 +44,12 @@ class Router
 
                 if (is_array($handler)) {
                     [$controllerClass, $action] = $handler;
-                    $controller = ($container && $container->has($controllerClass))
-                        ? $container->get($controllerClass)
-                        : new $controllerClass();
+                    $controller = new $controllerClass($container);
                     $result = $controller->$action($request, $params);
                 } else {
                     $result = $handler($request, $params);
                 }
 
-                
                 if ($result instanceof Response) {
                     return $result;
                 }

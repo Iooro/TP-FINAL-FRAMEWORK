@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+
 use App\Container;
 use App\Request;
 use App\Response;

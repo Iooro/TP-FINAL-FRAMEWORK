@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App;
 
-use Framework\view\TwigRenderer;
+use App\view\TwigRenderer;
 
 class Application
 {

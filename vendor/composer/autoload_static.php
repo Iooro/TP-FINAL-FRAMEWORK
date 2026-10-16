@@ -26,10 +26,6 @@ class ComposerStaticInitec651e5e4624ed5da4027ccee564484e
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
-        'F' =>
-        array (
-            'Framework\\' => 10,
-        ),
         'A' =>
         array (
             'App\\' => 4,
@@ -49,13 +45,10 @@ class ComposerStaticInitec651e5e4624ed5da4027ccee564484e
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Framework\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'App\\' =>
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/src',
+            1 => __DIR__ . '/../..' . '/app',
         ),
     );
 
