@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Framework\View;
+namespace Framework\view;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;

@@ -13,7 +13,7 @@ class Router
         $this->routes[$method][$path] = $handler;
     }
 
-    public function get(string $patha, callable|array $handler): void
+    public function get(string $path, callable|array $handler): void
     {
         $this->add('GET', $path, $handler);
     }
@@ -43,11 +43,13 @@ class Router
                 $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
 
                 if (is_array($handler)) {
-                    [$controllerClass, $method] = $handler;
-                    $controller = new $controllerClass();
-                    $result = $controller->$method($request, $params ?? []);
+                    [$controllerClass, $action] = $handler;
+                    $controller = ($container && $container->has($controllerClass))
+                        ? $container->get($controllerClass)
+                        : new $controllerClass();
+                    $result = $controller->$action($request, $params);
                 } else {
-                    $result = $handler($request, $params ?? []);
+                    $result = $handler($request, $params);
                 }
 
                 
