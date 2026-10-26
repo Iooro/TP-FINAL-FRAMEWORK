@@ -34,7 +34,7 @@ class Router
             return Response::html('<h1>404 — Page non trouvée</h1>', 404);
         }
         
-        foreach ($this->routes[$method] as $pattern => $handler) {
+        foreach ($this->routes[$method] ?? [] as $pattern => $handler) {
             $regex = preg_replace('#\{(\w+)\}#', '(?P<$1>[^/]+)', $pattern);
 
             $regex = '#^' . $regex . '$#';

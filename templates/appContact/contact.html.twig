@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Contact - Carnet de contacts{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">  
+    {% for dossier in dossiers %}
+        <div class="col-6 mb-4 mt-4">
+            <div class="card">
+                <h4 class="card-header">{{ dossier.nom }} {{ dossier.prenom }}</h4>
+                <div class="card-body">
+                    <h5 class="card-title">{{ dossier.numero }}</h5>
+                    <p class="card-text">{{ dossier.commentaire }}</p>
+                    <div>
+                        <a href="/contacts/update/{{ dossier.id }}" class="btn-solid theme-accent">Modifier</a>
+                        <a href="/contacts/delete/{{ dossier.id }}" class="btn-solid theme-secondary">Supprimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

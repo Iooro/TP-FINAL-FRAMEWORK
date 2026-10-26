@@ -1,0 +1,39 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "nom": "Martin",
+            "prenom": "Alice",
+            "commentaire": "Contact de démonstration",
+            "numero": "06 39 12 45 78"
+        },
+        {
+            "id": 2,
+            "nom": "Bernard",
+            "prenom": "Lucas",
+            "commentaire": "À rappeler la semaine prochaine",
+            "numero": "07 42 83 16 95"
+        },
+        {
+            "id": 3,
+            "nom": "Petit",
+            "prenom": "Emma",
+            "commentaire": "Client fictif pour les tests",
+            "numero": "06 51 74 28 63"
+        },
+        {
+            "id": 4,
+            "nom": "Robert",
+            "prenom": "Hugo",
+            "commentaire": "Demande d'informations",
+            "numero": "07 58 21 46 39"
+        },
+        {
+            "id": 5,
+            "nom": "Richard",
+            "prenom": "Chloé",
+            "commentaire": "Exemple de fiche contact",
+            "numero": "06 83 27 54 16"
+        }
+    ]
+}

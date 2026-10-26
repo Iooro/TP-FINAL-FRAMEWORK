@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Contact - Editeur de contacts{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="border rounded p-3">
+                <h3 class="text-center">Modifier le contact</h3>
+                
+                <form action="/contacts/update/{{ contact.id }}" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label" for="titre">Nom</label>
+                        <input type="text" required maxlength="65" name="nom" class="form-control" value="{{ contact.nom }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="titre">Prenom</label>
+                        <input type="text" required maxlength="65" name="prenom" class="form-control" value="{{ contact.prenom }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="titre">Numero</label>
+                        <input type="text" required maxlength="65" name="numero" class="form-control" value="{{ contact.numero }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="commentaire">Commentaire</label>
+                        <textarea id="commentaire" name="commentaire" class="form-control" rows="5" required>{{ contact.commentaire }}</textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn w-100">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

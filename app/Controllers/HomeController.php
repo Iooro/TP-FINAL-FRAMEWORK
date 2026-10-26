@@ -8,7 +8,7 @@ use App\Response;
 
 class HomeController
 {
-    private $view;
+    private \App\view\TwigRenderer $view;
 
     public function __construct(Container $container)
     {
@@ -17,6 +17,6 @@ class HomeController
 
     public function index(Request $request, array $params = []): Response
     {
-        return Response::html($this->view->render('contact/home.html.twig'));
+        return Response::html($this->view->render('appContact/home.html.twig'));
     }
 }
