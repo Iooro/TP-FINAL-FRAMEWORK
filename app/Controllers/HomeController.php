@@ -15,7 +15,7 @@ class HomeController
         $this->view = $container->get('view');
     }
 
-    public function index(Request $request, array $params = []): Response
+    public function index(): Response
     {
         return Response::html($this->view->render('appContact/home.html.twig'));
     }

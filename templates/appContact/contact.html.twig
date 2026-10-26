@@ -5,16 +5,16 @@
 {% block body %}
 <div class="container">
     <div class="row">  
-    {% for dossier in dossiers %}
+    {% for contact in contacts %}
         <div class="col-6 mb-4 mt-4">
             <div class="card">
-                <h4 class="card-header">{{ dossier.nom }} {{ dossier.prenom }}</h4>
+                <h4 class="card-header">{{ contact.nom }} {{ contact.prenom }}</h4>
                 <div class="card-body">
-                    <h5 class="card-title">{{ dossier.numero }}</h5>
-                    <p class="card-text">{{ dossier.commentaire }}</p>
+                    <h5 class="card-title">{{ contact.numero }}</h5>
+                    <p class="card-text">{{ contact.commentaire }}</p>
                     <div>
-                        <a href="/contacts/update/{{ dossier.id }}" class="btn-solid theme-accent">Modifier</a>
-                        <a href="/contacts/delete/{{ dossier.id }}" class="btn-solid theme-secondary">Supprimer</a>
+                        <a href="/contacts/update/{{ contact.id }}" class="btn-solid theme-accent">Modifier</a>
+                        <a href="/contacts/delete/{{ contact.id }}" class="btn-solid theme-secondary" onclick="return confirm('Voulez-vous supprimer ce contact ?')">Supprimer</a>
                     </div>
                 </div>
             </div>

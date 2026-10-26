@@ -10,4 +10,6 @@ $router->get('/contacts', [ContactController::class, 'contacts']);
 $router->post('/contacts', [ContactController::class, 'add']);
 $router->get('/contacts/update/{id}', [ContactController::class, 'edit']);
 $router->post('/contacts/update/{id}', [ContactController::class, 'update']);
-$router->post('/contacts/delete/{id}', [ContactController::class, 'delete']);
+$router->get('/contacts/delete/{id}', [ContactController::class, 'delete']);
+$router->get('/creer', [ContactController::class, 'creer']);
+$router->post('/ajouter',[ContactController::class, 'ajouter']);
